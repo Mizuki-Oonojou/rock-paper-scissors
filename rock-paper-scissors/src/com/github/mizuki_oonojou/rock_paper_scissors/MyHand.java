@@ -8,10 +8,14 @@ import java.util.Random;
  */
 public class MyHand {
 
+
 	// Method
 	public static RockPaperScissors get() {
 		
-		Random rand = new Random();
+		Random rand = SingletonRandom.getInstance();
+		
+		// FIXME print for test that 'rand' variable have one reference.
+//		System.out.println(rand);
 		
 		int handNum = rand.nextInt(3) + 1;
 		
