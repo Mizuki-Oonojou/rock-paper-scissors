@@ -4,7 +4,7 @@ package com.github.mizuki_oonojou.rock_paper_scissors;
  * @author Mizuki-Oonojou (Kazuma Nakao)
  *
  */
-public class RockPaperScissorsTester {
+public class Main {
 	public static void main(String[] args) {
 		
 		System.out.print("【じゃんけんアプリ】by Kazuma Nakao\n\n");

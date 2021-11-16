@@ -1,10 +1,6 @@
 package com.github.mizuki_oonojou.rock_paper_scissors;
 
 import java.io.BufferedReader;
-<<<<<<< HEAD
-=======
-import java.io.IOException;
->>>>>>> refs/tags/ver_0.01
 import java.io.InputStreamReader;
 
 
@@ -40,6 +36,7 @@ public class YourHand {
 					handNum == RockPaperScissors.PAPER.getHandNum()
 					));
 		
+		// FIXME I have getting 'new InputStreamReader()' and 'new Scanner()'.
 //		try {
 //			br.close();
 //		} catch (IOException e) {
