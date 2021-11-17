@@ -19,7 +19,7 @@ public class Me extends Human {
 		
 		Random rand = SingletonRandom.getInstance();
 		
-		// FIXME print for test that 'rand' variable have one reference.
+		// FIXME Print for test that 'rand' variable have one reference.
 //		System.out.println(rand);
 		
 		int handNum = rand.nextInt(3) + 1;

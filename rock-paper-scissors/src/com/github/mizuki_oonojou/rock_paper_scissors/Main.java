@@ -10,7 +10,7 @@ public class Main {
 		System.out.print("【じゃんけんアプリ】by Kazuma Nakao\n\n");
 		
 		// Registered you and me players.
-		// RockPaperScissors is enum type.
+		// 'RockPaperScissors' is enum type.
 		RockPaperScissors yourHand = null;
 		
 		Human me = new Me("私");
@@ -18,36 +18,30 @@ public class Main {
 
 		
 		// Let's play Rock-Paper-Scissors!
-		final boolean IS_SAME_HANDS = true;
-		
-		while (IS_SAME_HANDS) {
+		do {
 			
 			yourHand = YourHand.get();
 			myHand = me.playNormality();
 			
 			System.out.println("あなたは「" + yourHand.getJaName() + "」を選びましたね。");
 			
-			
-			if (myHand == yourHand) {
-				
-				System.out.println(me.getName() + "も「" + myHand.getJaName() + "」を選びました。");
-				System.out.println("あいこです！(;ﾟ∀ﾟ)=3ﾊｧﾊｧ");
-				continue;
-				
-			} else {
+			if (myHand != yourHand) {
 				
 				System.out.println(me.getName() + "は「" + myHand.getJaName() + "」を選びました。");
 				break;
 				
 			}
 			
-		}
+			System.out.println(me.getName() + "も「" + myHand.getJaName() + "」を選びました。");
+			System.out.println("あいこです！(;ﾟ∀ﾟ)=3ﾊｧﾊｧ");
+			
+		} while (myHand == yourHand);
 
 		// TODO I will change this expression to method. The method's name will be called isWinnerMe() in HandsLogic class.
 		if (
-			(myHand == RockPaperScissors.ROCK) && (yourHand == RockPaperScissors.SCISSORS) ||
-			(myHand == RockPaperScissors.SCISSORS) && (yourHand == RockPaperScissors.PAPER) ||
-			(myHand == RockPaperScissors.PAPER) && (yourHand == RockPaperScissors.ROCK)) {
+			(myHand == RockPaperScissors.ROCK) && (yourHand == RockPaperScissors.SCISSORS)
+			|| (myHand == RockPaperScissors.SCISSORS) && (yourHand == RockPaperScissors.PAPER)
+			|| (myHand == RockPaperScissors.PAPER) && (yourHand == RockPaperScissors.ROCK)) {
 			
 			System.out.println(me.getName() + "の勝ちです(ΦωΦ)ﾌﾌﾌ…。");
 			
