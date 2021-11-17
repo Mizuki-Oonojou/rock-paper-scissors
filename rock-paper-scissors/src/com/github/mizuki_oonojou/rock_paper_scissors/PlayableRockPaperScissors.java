@@ -7,4 +7,8 @@ package com.github.mizuki_oonojou.rock_paper_scissors;
 public interface PlayableRockPaperScissors {
 
 	RockPaperScissors playNormality();
+	
+
+	// FIXME Maybe add 'playWaitingGame'.
+//	RockPaperScissors playWaitingGame();
 }
