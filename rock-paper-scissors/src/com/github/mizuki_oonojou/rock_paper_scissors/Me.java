@@ -2,18 +2,20 @@ package com.github.mizuki_oonojou.rock_paper_scissors;
 
 import java.util.Random;
 
-
-// TODO delete me!
-
 /**
  * @author Mizuki-Oonojou (Kazuma Nakao)
  *
  */
-public class MyHand {
+public class Me extends Human {
 
-
+	// Constructor
+	public Me(String name) {
+		super(name);
+	}
+	
 	// Method
-	public static RockPaperScissors get() {
+	@Override
+	public RockPaperScissors playNormality() {
 		
 		Random rand = SingletonRandom.getInstance();
 		
@@ -33,6 +35,6 @@ public class MyHand {
 		}
 		
 		return RockPaperScissors.ERROR;
+		
 	}
-
 }

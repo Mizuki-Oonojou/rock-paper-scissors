@@ -10,12 +10,12 @@ public final class SingletonRandom {
 
 
 	// Fields
-	private static Random theInstance = new Random();
+	private static final Random Instance = new Random();
 	
 	
 	// Method
 	public static Random getInstance() {
-		return theInstance;
+		return Instance;
 	}
 
 }
