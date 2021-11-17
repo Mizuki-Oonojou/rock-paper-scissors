@@ -37,7 +37,6 @@ public class Main {
 			
 		} while (myHand == yourHand);
 
-		// TODO I will change this expression to method. The method's name will be called isWinnerMe() in HandsLogic class.
 		if (
 			(myHand == RockPaperScissors.ROCK) && (yourHand == RockPaperScissors.SCISSORS)
 			|| (myHand == RockPaperScissors.SCISSORS) && (yourHand == RockPaperScissors.PAPER)
