@@ -4,7 +4,7 @@ package com.github.mizuki_oonojou.rock_paper_scissors;
  * @author Mizuki-Oonojou (Kazuma Nakao)
  *
  */
-public enum RockPaperScissors {
+public enum ElementsOfRockPaperScissors {
 	
 	// enum
 	ROCK(1, "グー"),
@@ -20,10 +20,10 @@ public enum RockPaperScissors {
 	
 	
 	// Constructor, overload
-	private RockPaperScissors (int handNum) {
+	private ElementsOfRockPaperScissors (int handNum) {
 		setHandNum(handNum);
 	}
-	private RockPaperScissors (int handNum, String jaName) {
+	private ElementsOfRockPaperScissors (int handNum, String jaName) {
 		setHandNum(handNum);
 		setJaName(jaName);
 	}

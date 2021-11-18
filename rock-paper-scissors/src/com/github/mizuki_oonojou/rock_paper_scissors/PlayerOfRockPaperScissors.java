@@ -6,16 +6,16 @@ import java.util.Random;
  * @author Mizuki-Oonojou (Kazuma Nakao)
  *
  */
-public class Me extends Human {
+public abstract class PlayerOfRockPaperScissors extends Human {
 
-	// Constructor
-	public Me(String name) {
+	// Construcor
+	public PlayerOfRockPaperScissors(String name) {
 		super(name);
 	}
 	
 	// Method
-	public ElementsOfRockPaperScissors playNormality() {
-		
+	public ElementsOfRockPaperScissors playAutomatically() {
+
 		Random rand = SingletonRandom.getInstance();
 		
 		// FIXME Print for test that 'rand' variable have one reference.
@@ -34,6 +34,6 @@ public class Me extends Human {
 		}
 		
 		return ElementsOfRockPaperScissors.ERROR;
-		
 	}
+	
 }

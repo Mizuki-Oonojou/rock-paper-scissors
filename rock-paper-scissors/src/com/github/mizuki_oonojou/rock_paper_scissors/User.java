@@ -3,20 +3,23 @@ package com.github.mizuki_oonojou.rock_paper_scissors;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-
 /**
  * @author Mizuki-Oonojou (Kazuma Nakao)
  *
  */
-public class YourHand {
+public class User extends PlayerOfRockPaperScissors {
 
+	// Constructor
+	public User(String name) {
+		super(name);
+	}
+	
 	// Method
-	public static ElementsOfRockPaperScissors get() {
+	public Object[] playStdIn(BufferedReader br) {
 		
-		BufferedReader br =
-				new BufferedReader(
-				new InputStreamReader(
-				System.in));
+		br = new BufferedReader(
+					new InputStreamReader(
+					System.in));
 		
 		int handNum = ElementsOfRockPaperScissors.INIT.getHandNum();
 		
@@ -35,24 +38,28 @@ public class YourHand {
 					handNum == ElementsOfRockPaperScissors.SCISSORS.getHandNum() ||
 					handNum == ElementsOfRockPaperScissors.PAPER.getHandNum()
 					));
+
+
 		
-		// FIXME I have getting 'new InputStreamReader()' and 'new Scanner()'.
-//		try {
-//			br.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		// Start return
+		Object[] brAndHand = {br, null};
+		
 		
 		if (handNum == ElementsOfRockPaperScissors.ROCK.getHandNum()) {
-			return ElementsOfRockPaperScissors.ROCK;
+			brAndHand[1] = ElementsOfRockPaperScissors.ROCK;
+			return brAndHand;
 		}
 		if (handNum == ElementsOfRockPaperScissors.SCISSORS.getHandNum()) {
-			return ElementsOfRockPaperScissors.SCISSORS;
+			brAndHand[1] = ElementsOfRockPaperScissors.SCISSORS;
+			return brAndHand;
 		}
 		if (handNum == ElementsOfRockPaperScissors.PAPER.getHandNum()) {
-			return ElementsOfRockPaperScissors.PAPER;
+			brAndHand[1] = ElementsOfRockPaperScissors.PAPER;
+			return brAndHand;
 		}
+
 		
-		return ElementsOfRockPaperScissors.ERROR;
+		brAndHand[1] = ElementsOfRockPaperScissors.ERROR;
+		return brAndHand; 
 	}
 }

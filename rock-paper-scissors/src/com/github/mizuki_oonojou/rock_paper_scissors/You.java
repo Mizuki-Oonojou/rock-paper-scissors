@@ -13,7 +13,7 @@ public class You extends Human implements PlayableRockPaperScissors {
 	
 	// Method
 	@Override
-	public RockPaperScissors playNormality() {
+	public ElementsOfRockPaperScissors playNormality() {
 		// TODO Auto-generated method stub
 		return null;
 	}

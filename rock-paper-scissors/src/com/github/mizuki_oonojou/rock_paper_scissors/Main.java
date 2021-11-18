@@ -11,24 +11,22 @@ public class Main {
 		
 		// Registered you and me players.
 		// 'RockPaperScissors' is enum type.
-		RockPaperScissors yourHand = null;
+		ElementsOfRockPaperScissors yourHand = null;
 		
-		Human me = new Me("私");
-		RockPaperScissors myHand = null;
+		Computer me = new Computer("私");
+		ElementsOfRockPaperScissors myHand = null;
 
 		
 		// Let's play Rock-Paper-Scissors!
 		do {
 			
 			yourHand = YourHand.get();
-			myHand = me.playNormality();
+			myHand = me.playAutomatically();
 			
 			System.out.println("あなたは「" + yourHand.getJaName() + "」を選びましたね。");
 			
 			if (myHand != yourHand) {
-				
 				break;
-				
 			}
 			
 			System.out.println(me.getName() + "も「" + myHand.getJaName() + "」を選びました。");
@@ -42,9 +40,9 @@ public class Main {
 		
 		// TODO I will change this expression to method. The method's name will be called isWinnerMe() in HandsLogic class.
 		if (
-			(myHand == RockPaperScissors.ROCK) && (yourHand == RockPaperScissors.SCISSORS)
-			|| (myHand == RockPaperScissors.SCISSORS) && (yourHand == RockPaperScissors.PAPER)
-			|| (myHand == RockPaperScissors.PAPER) && (yourHand == RockPaperScissors.ROCK)) {
+			(myHand == ElementsOfRockPaperScissors.ROCK) && (yourHand == ElementsOfRockPaperScissors.SCISSORS)
+			|| (myHand == ElementsOfRockPaperScissors.SCISSORS) && (yourHand == ElementsOfRockPaperScissors.PAPER)
+			|| (myHand == ElementsOfRockPaperScissors.PAPER) && (yourHand == ElementsOfRockPaperScissors.ROCK)) {
 			
 			System.out.println(me.getName() + "の勝ちです(ΦωΦ)ﾌﾌﾌ…。");
 			

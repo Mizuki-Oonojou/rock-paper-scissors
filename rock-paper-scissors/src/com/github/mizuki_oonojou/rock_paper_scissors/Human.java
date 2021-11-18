@@ -4,7 +4,7 @@ package com.github.mizuki_oonojou.rock_paper_scissors;
  * @author Mizuki-Oonojou (Kazuma Nakao)
  *
  */
-public abstract class Human implements PlayableRockPaperScissors {
+public abstract class Human {
 
 	// Fields
 	private String name;
