@@ -11,6 +11,7 @@ public class Main {
 		
 		// Registered you and me players.
 		// 'RockPaperScissors' is enum type.
+		User you = new User("あなた");
 		ElementsOfRockPaperScissors yourHand = null;
 		
 		Computer me = new Computer("私");
@@ -23,7 +24,7 @@ public class Main {
 			yourHand = YourHand.get();
 			myHand = me.playAutomatically();
 			
-			System.out.println("あなたは「" + yourHand.getJaName() + "」を選びましたね。");
+			System.out.println(you.getName() + "は「" + yourHand.getJaName() + "」を選びましたね。");
 			
 			if (myHand != yourHand) {
 				break;
@@ -47,7 +48,7 @@ public class Main {
 			System.out.println(me.getName() + "の勝ちです(ΦωΦ)ﾌﾌﾌ…。");
 			
 		} else {
-			System.out.println("あなたの勝ちですヽ(ﾟ∀ﾟ)ﾉ ﾊﾟｯ☆。");
+			System.out.println(you.getName() + "の勝ちですヽ(ﾟ∀ﾟ)ﾉ ﾊﾟｯ☆。");
 		}
 		
 	}
