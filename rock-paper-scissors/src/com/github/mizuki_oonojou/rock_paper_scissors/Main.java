@@ -27,7 +27,6 @@ public class Main {
 			
 			if (myHand != yourHand) {
 				
-				System.out.println(me.getName() + "は「" + myHand.getJaName() + "」を選びました。");
 				break;
 				
 			}
@@ -36,7 +35,11 @@ public class Main {
 			System.out.println("あいこです！(;ﾟ∀ﾟ)=3ﾊｧﾊｧ");
 			
 		} while (myHand == yourHand);
+		
+		
+		System.out.println(me.getName() + "は「" + myHand.getJaName() + "」を選びました。");
 
+		
 		// TODO I will change this expression to method. The method's name will be called isWinnerMe() in HandsLogic class.
 		if (
 			(myHand == RockPaperScissors.ROCK) && (yourHand == RockPaperScissors.SCISSORS)
