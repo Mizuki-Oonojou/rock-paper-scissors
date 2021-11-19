@@ -1,5 +1,9 @@
 package com.github.mizuki_oonojou.rock_paper_scissors;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * @author Mizuki-Oonojou (Kazuma Nakao)
  *
@@ -11,6 +15,7 @@ public class Main {
 		
 		// Registered you and me players.
 		// 'RockPaperScissors' is enum type.
+		
 		User you = new User("あなた");
 		ElementsOfRockPaperScissors yourHand = null;
 		
@@ -19,9 +24,14 @@ public class Main {
 
 		
 		// Let's play Rock-Paper-Scissors!
+		
+		BufferedReader br = new BufferedReader(
+				new InputStreamReader(
+				System.in));
+		
 		do {
 			
-			yourHand = YourHand.get();
+			yourHand = you.playStdIn(br);
 			myHand = me.playAutomatically();
 			
 			System.out.println(you.getName() + "は「" + yourHand.getJaName() + "」を選びましたね。");
@@ -34,6 +44,14 @@ public class Main {
 			System.out.println("あいこです！(;ﾟ∀ﾟ)=3ﾊｧﾊｧ");
 			
 		} while (myHand == yourHand);
+		
+		try {
+			if (br != null) {
+				br.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		
 		System.out.println(me.getName() + "は「" + myHand.getJaName() + "」を選びました。");

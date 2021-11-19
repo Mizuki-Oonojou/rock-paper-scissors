@@ -1,7 +1,6 @@
 package com.github.mizuki_oonojou.rock_paper_scissors;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 /**
  * @author Mizuki-Oonojou (Kazuma Nakao)
@@ -15,11 +14,7 @@ public class User extends PlayerOfRockPaperScissors {
 	}
 	
 	// Method
-	public Object[] playStdIn(BufferedReader br) {
-		
-		br = new BufferedReader(
-					new InputStreamReader(
-					System.in));
+	public ElementsOfRockPaperScissors playStdIn(BufferedReader br) {
 		
 		int handNum = ElementsOfRockPaperScissors.INIT.getHandNum();
 		
@@ -42,24 +37,18 @@ public class User extends PlayerOfRockPaperScissors {
 
 		
 		// Start return
-		Object[] brAndHand = {br, null};
-		
 		
 		if (handNum == ElementsOfRockPaperScissors.ROCK.getHandNum()) {
-			brAndHand[1] = ElementsOfRockPaperScissors.ROCK;
-			return brAndHand;
+			return ElementsOfRockPaperScissors.ROCK;
 		}
 		if (handNum == ElementsOfRockPaperScissors.SCISSORS.getHandNum()) {
-			brAndHand[1] = ElementsOfRockPaperScissors.SCISSORS;
-			return brAndHand;
+			return ElementsOfRockPaperScissors.SCISSORS;
 		}
 		if (handNum == ElementsOfRockPaperScissors.PAPER.getHandNum()) {
-			brAndHand[1] = ElementsOfRockPaperScissors.PAPER;
-			return brAndHand;
+			return ElementsOfRockPaperScissors.PAPER;
 		}
 
 		
-		brAndHand[1] = ElementsOfRockPaperScissors.ERROR;
-		return brAndHand; 
+		return ElementsOfRockPaperScissors.ERROR; 
 	}
 }
