@@ -16,10 +16,10 @@ public class Main {
 		// Registered you and me players.
 		// 'RockPaperScissors' is enum type.
 		
-		User you = new User("あなた");
+		PlayerOfRockPaperScissors you = new User("あなた");
 		ElementsOfRockPaperScissors yourHand = null;
 		
-		Computer me = new Computer("私");
+		PlayerOfRockPaperScissors me = new Computer("私");
 		ElementsOfRockPaperScissors myHand = null;
 
 		
@@ -32,7 +32,7 @@ public class Main {
 		do {
 			
 			yourHand = you.playStdIn(br);
-			myHand = me.playAutomatically();
+			myHand = me.playRandomHand();
 			
 			System.out.println(you.getName() + "は「" + yourHand.getJaName() + "」を選びましたね。");
 			
@@ -44,7 +44,8 @@ public class Main {
 			System.out.println("あいこです！(;ﾟ∀ﾟ)=3ﾊｧﾊｧ");
 			
 		} while (myHand == yourHand);
-		
+
+		// To close BufferedReader stream and standard input.
 		try {
 			if (br != null) {
 				br.close();
