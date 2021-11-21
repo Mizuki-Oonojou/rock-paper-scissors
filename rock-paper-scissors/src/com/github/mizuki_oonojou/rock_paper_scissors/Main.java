@@ -21,7 +21,7 @@ public class Main {
 		
 		PlayerOfRockPaperScissors me = new Computer("私");
 		ElementsOfRockPaperScissors myHand = null;
-
+		
 		
 		// Let's play Rock-Paper-Scissors!
 		

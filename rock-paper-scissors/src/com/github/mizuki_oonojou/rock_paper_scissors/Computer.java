@@ -16,7 +16,7 @@ public class Computer extends PlayerOfRockPaperScissors {
 	// Method
 	@Override
 	public ElementsOfRockPaperScissors playStdIn(BufferedReader br) {
-		// TODO To print error by throws.
+		// TODO To throw and throws error.
 		return super.playStdIn(br);
 	}
 	
