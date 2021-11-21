@@ -60,9 +60,6 @@ public abstract class PlayerOfRockPaperScissors
 
 		Random rand = SingletonRandom.getInstance();
 		
-		// FIXME Print for test that 'rand' variable have one reference.
-//		System.out.println(rand);
-		
 		int handNum = rand.nextInt(3) + 1;
 		
 		if (handNum == ElementsOfRockPaperScissors.ROCK.getHandNum()) {
